@@ -14,5 +14,9 @@ fetch('https://api.escuelajs.co/api/v1/auth/profile', {
         userName.classList.add('text-3xl', 'font-bold', 'underline')
         userInfo.appendChild(userName);
         // Create and append user avatar to user info div
+        const userAvatar = document.createElement('img');
+        userAvatar.src = data.avatar;
+        userAvatar.alt = data.name;
+        userInfo.appendChild(userAvatar);
     })
     .catch(error => console.log(error));
